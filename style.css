@@ -112,7 +112,7 @@ footer {
     width: 10vw;
     top: 3vw;
     left: 86vw;
-    z-index: 2;
+    z-index: 3;
 }
 
 .menu_background {
@@ -183,7 +183,7 @@ a:visited {
     background-color: #acd6c4;
     height: 23vw;
     width: 100vw;
-    z-index: 1;
+    z-index: 2;
 
 }
 
@@ -298,10 +298,115 @@ a:visited {
     width: 89vw;
     background-color: #0c0c0c;
     margin-bottom: 10vw;
+    margin-top: 10vw;
+}
+
+/*------------------------------
+: GRUNDLÆGGENDE WEB, UX, ANIMATION & CONTENT
+------------------------------*/
+
+#web h3,
+#ux h3,
+#animation h3,
+#content h3 {
+    font-size: 3rem;
+    margin: 0;
+    position: absolute;
+    top: -7vw;
+    left: 20vw;
+    z-index: 1;
+}
+
+#web .sectionwrapper,
+#ux .sectionwrapper,
+#animation .sectionwrapper,
+#content .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vw 10vw;
+}
+
+#web .col_wide,
+#ux .col_wide,
+#animation .col_wide,
+#content .col_wide {
+    padding: 30vw 5vw 3vw 5vw;
+}
+
+#web .bottom,
+.top,
+#ux .bottom,
+top,
+#animation .bottom,
+top,
+#content .bottom,
+.top {
+    position: relative;
+}
+
+#web .col_narrow,
+#ux .col_narrow,
+#animation .col_narrow,
+#content .col_narrow {
+    padding: 5vw 5vw 25vw;
+}
+
+#web .bottom p,
+#ux .bottom p,
+#animation .bottom p,
+#content .bottom p {
+    position: absolute;
+    top: 15vw;
+    left: 6vw;
+}
+
+#web .box,
+#ux .box,
+#animation .box,
+#content .box {
+    height: 10vw;
+    width: 70vw;
+    background-color: #3e9d87;
+}
+
+#web .frame,
+#ux .frame,
+#animation .frame,
+#content .frame {
+    position: absolute;
+    height: 9vw;
+    width: 69vw;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0.5vw;
+    border-color: 0c0c0c;
+    top: -2vw;
+    left: -2vw;
+}
+
+#web .line,
+#ux .line,
+#animation .line,
+#content .line {
+    position: absolute;
+    height: 18vw;
+    width: 0.5vw;
+    top: 5vw;
+    left: 3vw;
+    background-color: #0c0c0c;
 }
 
 
+
+
+
 @media only screen and (min-width:900px) {
+
+
+    footer {
+        margin-top: 10vw;
+        height: 3vw;
+    }
 
     /*------------------------------
 ALMINDELIG MENU
@@ -323,7 +428,7 @@ ALMINDELIG MENU
         position: fixed;
         right: -21vw;
         top: 20vw;
-        z-index: 2;
+        z-index: 3;
         width: 50vw;
     }
 
@@ -495,21 +600,15 @@ ALMINDELIG MENU
     #ux h3,
     #animation h3,
     #content h3 {
-        font-size: 3rem;
-        margin: 0;
-        position: absolute;
         top: -2.2vw;
         left: 5.5vw;
-        z-index: 1;
     }
 
     #web .sectionwrapper,
     #ux .sectionwrapper,
     #animation .sectionwrapper,
     #content .sectionwrapper {
-        display: flex;
         flex-wrap: nowrap;
-        padding: 5vw 10vw;
     }
 
     #web .col_wide,
@@ -526,23 +625,11 @@ ALMINDELIG MENU
         padding: 0 3vw;
     }
 
-    #web .bottom,
-    .top,
-    #ux .bottom,
-    top,
-    #animation .bottom,
-    top,
-    #content .bottom,
-    .top {
-        position: relative;
-    }
-
     #web .bottom p,
     #ux .bottom p,
     #animation .bottom p,
     #content .bottom p {
-        position: absolute;
-        top: 7vw;
+        top: 8.3vw;
         left: 1.5vw;
     }
 
@@ -559,13 +646,9 @@ ALMINDELIG MENU
     #ux .frame,
     #animation .frame,
     #content .frame {
-        position: absolute;
         height: 4.5vw;
         width: 19.5vw;
-        background-color: transparent;
-        border-style: solid;
         border-width: 0.18vw;
-        border-color: 0c0c0c;
         top: -0.7vw;
         left: -0.7vw;
     }
@@ -574,12 +657,10 @@ ALMINDELIG MENU
     #ux .line,
     #animation .line,
     #content .line {
-        position: absolute;
         height: 8vw;
         width: 0.18vw;
         top: 2.5vw;
         left: 0.5vw;
-        background-color: #0c0c0c;
     }
 
     /*------------------------------
