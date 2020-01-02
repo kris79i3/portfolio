@@ -53,7 +53,7 @@ h4 {
 
 footer {
     background-color: #acd6c4;
-    height: 2.5vw;
+    height: 8vw;
 }
 
 /*------------------------------
@@ -101,9 +101,8 @@ footer {
 }
 
 /*------------------------------
-1: BURGER MENU
+1: BURGER MENU (MOBILE)
 ------------------------------*/
-
 
 #menu_button {
     position: fixed;
@@ -184,6 +183,7 @@ a:visited {
     background-color: #acd6c4;
     height: 23vw;
     width: 100vw;
+    z-index: 1;
 
 }
 
@@ -230,6 +230,76 @@ a:visited {
 
 }
 
+/*------------------------------
+: PORTFOLIO
+------------------------------*/
+
+#portfolio .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30vw 5vw;
+}
+
+#portfolio .col {
+    height: 90vw;
+
+}
+
+#portfolio .image {
+    position: relative;
+    padding: 10vw 5vw 0vw;
+}
+
+#portfolio .frame {
+    position: absolute;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0.3vw;
+    width: 80vw;
+    height: 53vw;
+    left: 2.5vw;
+    top: 8vw;
+}
+
+#portfolio .text {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 85vw;
+    height: 30vw;
+    top: -67vw;
+    left: 2vw;
+}
+
+#portfolio h3 {
+    color: #3e9d87;
+    font-size: 18vw;
+    padding-left: 10vw;
+}
+
+#portfolio h4 {
+    font-size: 4vw;
+    padding: 5vw 1vw;
+}
+
+#portfolio .text p {
+    padding-top: 48vw;
+}
+
+#portfolio .image p {
+    position: absolute;
+    top: 55vw;
+    left: 50vw;
+    color: #3e9d87;
+}
+
+#portfolio .space {
+    height: 0.3vw;
+    width: 89vw;
+    background-color: #0c0c0c;
+    margin-bottom: 10vw;
+}
+
 
 @media only screen and (min-width:900px) {
 
@@ -253,7 +323,7 @@ ALMINDELIG MENU
         position: fixed;
         right: -21vw;
         top: 20vw;
-        z-index: 1;
+        z-index: 2;
         width: 50vw;
     }
 
@@ -339,40 +409,34 @@ ALMINDELIG MENU
     #portfolio .sectionwrapper {
         display: flex;
         flex-wrap: wrap;
-        padding: 5vw;
+        padding: 6vw;
     }
 
-
     #portfolio .image {
-        position: relative;
         top: 0vw;
-        left: 20vw;
-        width: 65vw;
+        left: 28vw;
+        width: 55vw;
+        padding: 0;
     }
 
     #portfolio .text {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
         width: 50vw;
+        height: 1vw;
         top: -35vw;
         left: 4vw;
+        padding-top: 5vw;
     }
 
     #portfolio .frame {
-        position: absolute;
-        background-color: transparent;
-        border-style: solid;
-        border-width: 0.3vw;
-        width: 64vw;
-        height: 42.5vw;
+        width: 54vw;
+        height: 36vw;
         left: -1.5vw;
-        top: -1.5vw;
+        top: -1.8vw;
     }
 
     #portfolio h3 {
-        color: #3e9d87;
-        font-size: 10vw;
+        font-size: 8vw;
+        padding: 0;
     }
 
     #portfolio h4 {
@@ -380,13 +444,16 @@ ALMINDELIG MENU
         padding: 5vw 0 0 1vw;
     }
 
-    #portfolio p {
+    #portfolio .text p {
         width: 38vw;
         font-size: 1.5vw;
+        padding: 0;
+        position: absolute;
+        top: 13vw;
     }
 
     #portfolio .text_reverse {
-        left: 52.5vw;
+        left: 42.4vw;
     }
 
     #portfolio .image_reverse {
@@ -405,8 +472,7 @@ ALMINDELIG MENU
     }
 
     #portfolio .col {
-        height: 50vw;
-
+        height: 43vw;
     }
 
     #portfolio .image p {
