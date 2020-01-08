@@ -1,0 +1,1108 @@
+/*------------------------------
+1: GENERELT ?-?
+2: KLASSER ?-?
+: BURGER MENU ?-?
+: HEADLINE ?-?
+: FORSIDE ?-?
+: PORTFOLIO ?-?
+: WEB, UX, ANIMATION & CONTENT ?-?
+: OPGAVER + OM (ikke alt) ?-?
+: OM ?-?
+------------------------------*/
+
+
+/*------------------------------
+1: GENERELT linie ?-?
+------------------------------*/
+
+body {
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+img {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+}
+
+p {
+    font-family: 'Muli', sans-serif;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+a {
+    font-family: 'Muli', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    text-decoration: none;
+    color: #3e9d87;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    color: #3e9d87;
+    font-size: 16vw;
+    left: 11vw;
+    top: 6vw;
+    position: absolute;
+}
+
+h2 {
+    font-family: 'Pinyon Script', cursive;
+    margin: 0;
+    color: #ffffff;
+    font-size: 8vw;
+    top: 12vw;
+    left: 4vw;
+    position: absolute;
+}
+
+#asset h2,
+#redesign h2,
+#om h2 {
+    font-size: 7vw;
+}
+
+h3 {
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    font-size: 4.5vw;
+    letter-spacing: 0.2vw;
+    font-weight: normal;
+}
+
+h4 {
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7vw 5vw;
+    flex: 1 0 auto;
+}
+
+.frame {
+    position: absolute;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0.5vw;
+    border-color: #0c0c0c;
+}
+
+/*------------------------------
+3: KLASSER linie ?-?
+------------------------------*/
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.closed {
+    animation-name: close_kf;
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes close_kf {
+    0% {
+        background-image: url(billeder/cross.svg);
+    }
+
+    100% {
+        background-image: url(billeder/burger.svg);
+    }
+}
+
+.open {
+    animation-name: open_kf;
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes open_kf {
+    100% {
+        background-image: url(billeder/cross.svg);
+    }
+}
+
+.portfolio_move {
+    animation-name: portfolio_move_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes portfolio_move_kf {
+    100% {
+        transform: translateY(-17.5vw);
+    }
+}
+
+.om_move {
+    animation-name: om_move_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes om_move_kf {
+    100% {
+        transform: translateY(16vw);
+    }
+}
+
+.portfolio_color {
+    animation-name: portfolio_color_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes portfolio_color_kf {
+    100% {
+        background-color: #acd6c4
+    }
+}
+
+/*------------------------------
+: BURGER MENU linie ?-?
+------------------------------*/
+
+#menu_button {
+    position: fixed;
+    background-image: url(billeder/burger.svg);
+    background-size: cover;
+    height: 10vw;
+    width: 10vw;
+    top: 3vw;
+    left: 86vw;
+    z-index: 3;
+}
+
+.menu_background {
+    background-color: #acd6c4;
+    top: 22vw;
+    left: 0vw;
+    height: 11vw;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+}
+
+#om_nav .menu_background {
+    background-color: #d3b4df;
+}
+
+#forside_nav .menu_background {
+    background-color: #ffe1a1;
+}
+
+.alm_menu {
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    margin-top: 3vw;
+}
+
+.underline {
+    height: 0.5vw;
+    width: 90vw;
+    background-color: #3e9d87;
+    z-index: 1;
+    position: absolute;
+    top: 7.6vw;
+    left: 5vw;
+}
+
+#forside_nav .underline {
+    background-color: #e6a926;
+}
+
+#om_nav .underline {
+    background-color: #8a48a2;
+}
+
+nav a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #0c0c0c;
+}
+
+a.active {
+    color: #ffffff;
+}
+
+nav a:hover {
+    color: #3e9d87;
+}
+
+#forside_nav a:hover {
+    color: #e6a926;
+}
+
+#om_nav a:hover {
+    color: #8a48a2;
+}
+
+
+
+/*------------------------------
+: HEADLINE linie ?-?
+------------------------------*/
+
+.headline {
+    position: fixed;
+    background-color: #acd6c4;
+    height: 23vw;
+    width: 100vw;
+    z-index: 2;
+    top: 0;
+}
+
+#om .headline {
+    background-color: #d3b4df;
+}
+
+#forside .headline {
+    background-color: #ffe1a1;
+}
+
+#om h1 {
+    color: #8a48a2;
+}
+
+#forside h1 {
+    color: #e6a926;
+}
+
+/*------------------------------
+: BRØDKRUMMESTI ?-?
+------------------------------*/
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    color: #a8a8a8;
+    padding: 25vw 5vw 0;
+}
+
+
+.breadcrumbs a {
+    color: #a8a8a8;
+    margin: 0 1vw;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs a.active {
+    color: #3e9d87;
+}
+
+#om .breadcrumbs a.active {
+    color: #8a48a2;
+}
+
+/*------------------------------
+: FOOTER linie ?-?
+------------------------------*/
+
+footer {
+    background-color: #acd6c4;
+    height: 6vw;
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+}
+
+.om_footer {
+    background-color: #d3b4df;
+}
+
+.forside_footer {
+    display: none;
+}
+
+/*------------------------------
+: FORSIDE linie ?-?
+------------------------------*/
+
+#forside {
+    width: 100%;
+    height: 100vh;
+    background-image: url(billeder/splash_mobile.svg);
+    background-size: cover;
+}
+
+
+/*------------------------------
+: PORTFOLIO linie ?-?
+------------------------------*/
+
+#portfolio .image {
+    position: relative;
+    padding: 11vw 6vw 0vw;
+}
+
+#portfolio .box {
+    background-color: #acd6c4;
+    width: 82vw;
+    height: 54vw;
+
+}
+
+#portfolio .frame {
+    width: 80vw;
+    height: 53vw;
+    left: 2.5vw;
+    top: 8vw;
+    z-index: 1;
+}
+
+#portfolio .text {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 85vw;
+    height: 20vw;
+    top: -67vw;
+    left: 2vw;
+    pointer-events: none;
+}
+
+#portfolio h3 {
+    color: #3e9d87;
+    font-size: 18vw;
+    padding-left: 10vw;
+    z-index: 1;
+    font-weight: bold;
+}
+
+#portfolio h4 {
+    font-size: 5vw;
+    padding: 5vw 1vw;
+    z-index: -1;
+    letter-spacing: 0.2vw;
+}
+
+#portfolio .text p {
+    padding-top: 48vw;
+    z-index: -1;
+}
+
+#portfolio .image p {
+    position: absolute;
+    top: 54vw;
+    left: 45vw;
+    color: #3e9d87;
+}
+
+#portfolio .space {
+    height: 0.4vw;
+    width: 89vw;
+    background-color: #a8a8a8;
+    margin-bottom: 10vw;
+    margin-top: 10vw;
+}
+
+/*------------------------------
+: WEB, UX, ANIMATION & CONTENT
+------------------------------*/
+
+#web h4,
+#ux h4,
+#animation h4,
+#content h4 {
+    font-size: 3rem;
+    margin: 0;
+    position: absolute;
+    top: -7vw;
+    left: 20vw;
+    z-index: 1;
+}
+
+#web .bottom,
+.top,
+#ux .bottom,
+top,
+#animation .bottom,
+top,
+#content .bottom,
+.top {
+    position: relative;
+}
+
+#web .col_wide,
+#ux .col_wide,
+#animation .col_wide,
+#content .col_wide {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#web .text,
+#ux .text,
+#animation .text,
+#content .text {
+    padding-right: 5vw;
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+
+#web .col_narrow,
+#ux .col_narrow,
+#animation .col_narrow,
+#content .col_narrow {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 200px;
+    padding: 15vw 5vw;
+}
+
+#web .bottom p,
+#ux .bottom p,
+#animation .bottom p,
+#content .bottom p {
+    position: absolute;
+    top: 15vw;
+    left: 6vw;
+}
+
+#web .col_narrow a,
+#ux .col_narrow a,
+#animation .col_narrow a,
+#content .col_narrow a,
+#portfolio .col a {
+    color: #0c0c0c;
+}
+
+#web .box,
+#ux .box,
+#animation .box,
+#content .box {
+    height: 10vw;
+    width: 70vw;
+    background-color: #3e9d87;
+}
+
+#web .frame,
+#ux .frame,
+#animation .frame,
+#content .frame {
+    height: 9vw;
+    width: 69vw;
+    border-width: 0.5vw;
+    top: -2vw;
+    left: -2vw;
+}
+
+#web .line,
+#ux .line,
+#animation .line,
+#content .line {
+    position: absolute;
+    height: 18vw;
+    width: 0.5vw;
+    top: 5vw;
+    left: 3vw;
+    background-color: #0c0c0c;
+}
+
+/*------------------------------
+: OPGAVER + OM (ikke alt)
+------------------------------*/
+
+#site .col,
+#data .col,
+#prototype .col,
+#sprint .col,
+#asset .col,
+#ani_opg .col,
+#billeddeling .col,
+#pilot .col,
+#redesign .col,
+#om .col {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#site .left,
+#data .left,
+#prototype .left,
+#sprint .left,
+#asset .left,
+#ani_opg .left,
+#billeddeling .left,
+#pilot .left,
+#redesign .left,
+#om .left {
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+
+#site .right,
+#data .right,
+#prototype .right,
+#sprint .right,
+#asset .right,
+#ani_opg .right,
+#billeddeling .right,
+#redesign .right,
+#om .right {
+    flex-grow: 1;
+    flex-basis: 400px;
+    padding: 10vw 10vw 10vw;
+    position: relative;
+}
+
+#pilot .right {
+    flex-grow: 1;
+    flex-basis: 500px;
+    padding-bottom: 10vw;
+}
+
+#data .data_image,
+#prototype .prototype_image {
+    background-color: #3e9d87;
+    height: 70vw;
+    width: 70vw;
+    z-index: -1;
+}
+
+#redesign .video {
+    padding: 0vw 0vw 10vw;
+}
+
+#site .frame,
+#data .frame,
+#prototype .frame,
+#sprint .frame,
+#asset .frame,
+#ani_opg .frame,
+#billeddeling .frame,
+#redesign .frame,
+#om .frame {
+    position: absolute;
+    width: 70vw;
+    height: 70vw;
+    left: 5vw;
+    top: 5vw;
+}
+
+#site .line,
+#data .line,
+#prototype .line,
+#sprint .line,
+#asset .line,
+#ani_opg .line,
+#billeddeling .line,
+#redesign .line,
+#om .line {
+    position: absolute;
+    height: 20vw;
+    width: 0.5vw;
+    top: -4vw;
+    left: 70vw;
+    background-color: #0c0c0c;
+    z-index: 1;
+}
+
+#asset .line {
+    height: 15vw;
+    top: 0vw;
+}
+
+#site .right a img,
+#data .right a img,
+#prototype .right a img,
+#sprint .right a img,
+#asset .right a img,
+#ani_opg .right img,
+#billeddeling .right img,
+#redesign .right img {
+    filter: grayscale(1);
+}
+
+#site .right a:hover img,
+#data .right a:hover .prototype_image,
+#prototype .right a:hover .prototype_image,
+#sprint .right a:hover img,
+#asset .right a:hover img,
+#ani_opg .right a:hover img,
+#billeddeling .right a:hover img,
+#redesign .right a:hover img {
+    filter: grayscale(0);
+}
+
+/*------------------------------
+: OM
+------------------------------*/
+
+#om .frame {
+    height: 92vw;
+    width: 70vw;
+}
+
+@media only screen and (min-width:900px) {
+
+    /*------------------------------
+1: GENERELT
+------------------------------*/
+
+    h1 {
+        font-size: 8vw;
+        left: 11vw;
+        top: 0vw;
+    }
+
+
+    h2,
+    #asset h2,
+    #redesign h2,
+    #om h2 {
+        font-size: 3.5vw;
+        top: 3.5vw;
+        left: 6vw;
+
+    }
+
+    h3 {
+        font-size: 2vw;
+        letter-spacing: 0.1vw;
+    }
+
+    .sectionwrapper {
+        padding: 3vw 5vw 0;
+    }
+
+    #web .sectionwrapper,
+    #ux .sectionwrapper,
+    #animation .sectionwrapper {
+        height: 31.9vw;
+    }
+
+    footer {
+        height: 2vw;
+    }
+
+    .om_footer {
+        margin-top: 4vw;
+    }
+
+    .frame {
+        border-width: 0.3vw;
+    }
+
+
+    /*------------------------------
+ALMINDELIG MENU
+------------------------------*/
+
+    #menu_button {
+        visibility: hidden;
+    }
+
+
+    .underline {
+        height: 0.2vw;
+        width: 42vw;
+        transform: rotate(90deg);
+        margin: -3vw 0vw 0vw -2vw;
+    }
+
+    nav {
+        position: fixed;
+        right: -21vw;
+        top: 19vw;
+        z-index: 3;
+        width: 50vw;
+    }
+
+    nav a {
+        font-size: 1.2vw;
+    }
+
+    .alm_menu {
+        transform: rotate(90deg);
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-start;
+    }
+
+
+    /*------------------------------
+: HEADLINE
+------------------------------*/
+    .headline {
+        position: relative;
+        height: 9.5vw;
+        top: 2vw;
+    }
+
+    #forside .headline {
+        top: 20vw;
+    }
+
+    #om .headline {
+        top: 35.5vw;
+    }
+
+    /*------------------------------
+: BRØDKRUMMESTI ?-?
+------------------------------*/
+
+    .breadcrumbs {
+        padding: 3vw 5vw 0;
+    }
+
+
+    /*------------------------------
+: FORSIDE
+------------------------------*/
+    .forside_footer {
+        display: none;
+    }
+
+    #forside {
+        width: 100%;
+        height: 100vh;
+        background-image: url(billeder/splash.svg);
+        background-size: cover;
+    }
+
+    /*------------------------------
+: PORTFOLIO
+------------------------------*/
+
+    #portfolio .image {
+        top: 0vw;
+        left: 28vw;
+        width: 55vw;
+        padding: 0;
+    }
+
+    #portfolio .box {
+        width: 55vw;
+        height: 37vw;
+
+    }
+
+    #portfolio .text {
+        width: 50vw;
+        height: 0;
+        top: -35vw;
+        left: 4vw;
+        padding-top: 5vw;
+        z-index: 0;
+    }
+
+    #portfolio .frame {
+        width: 54vw;
+        height: 36vw;
+        left: -1.5vw;
+        top: -1.8vw;
+    }
+
+    #portfolio h3 {
+        font-size: 8vw;
+        padding: 0;
+    }
+
+    #portfolio h4 {
+        font-size: 3.5vw;
+        padding: 4vw 0 0 1vw;
+        letter-spacing: 0vw;
+    }
+
+    #portfolio .text p {
+        width: 38vw;
+        font-size: 1.2rem;
+        padding: 0;
+        top: 13vw;
+        font-weight: bold;
+    }
+
+    #portfolio .text_reverse {
+        left: 42.4vw;
+    }
+
+    #portfolio .image_reverse {
+        left: 0;
+    }
+
+    #portfolio .frame_reverse {
+        left: 1.8vw;
+    }
+
+    #portfolio .space {
+        height: 0.12vw;
+        width: 75vw;
+        margin: 0vw 0vw 7vw 5vw;
+    }
+
+    #portfolio .col {
+        height: 43vw;
+    }
+
+    #portfolio .image p {
+        left: 38vw;
+        top: 30vw;
+        font-size: 1.2vw;
+    }
+
+    #portfolio p.reverse {
+        left: 7vw;
+    }
+
+
+
+    /*------------------------------
+: WEB, UX, ANIMATION & CONTENT
+------------------------------*/
+
+    #web h4,
+    #ux h4,
+    #animation h4,
+    #content h4 {
+        top: -2.2vw;
+        left: 5.5vw;
+    }
+
+    #web h3,
+    #ux h3,
+    #animation h3,
+    #content h3 {
+        padding: 1vw 0 0 6.5vw;
+    }
+
+
+    #web .col_wide,
+    #ux .col_wide,
+    #animation .col_wide,
+    #content .col_wide {
+        padding: 0 6.5vw 0 6.5vw;
+    }
+
+    #web .col_narrow,
+    #ux .col_narrow,
+    #animation .col_narrow,
+    #content .col_narrow {
+        padding: 5vw 5vw 8vw 2vw;
+    }
+
+    #web .col_narrow {
+        padding-left: 32vw;
+    }
+
+    #content .col_narrow {
+        padding: 7vw 0vw 8vw 12vw;
+    }
+
+    #web .bottom p,
+    #ux .bottom p,
+    #animation .bottom p,
+    #content .bottom p {
+        top: 7vw;
+        left: 1.5vw;
+    }
+
+    #web .box,
+    #ux .box,
+    #animation .box,
+    #content .box {
+        height: 5vw;
+        width: 20vw;
+    }
+
+    #web .frame,
+    #ux .frame,
+    #animation .frame,
+    #content .frame {
+        height: 4.5vw;
+        width: 19.5vw;
+        border-width: 0.18vw;
+        top: -0.7vw;
+        left: -0.7vw;
+    }
+
+    #web .line,
+    #ux .line,
+    #animation .line,
+    #content .line {
+        height: 7vw;
+        width: 0.18vw;
+        top: 2.5vw;
+        left: 0.5vw;
+    }
+
+    /*------------------------------
+: OPGAVER + OM (ikke alt)
+------------------------------*/
+
+    #pilot .col {
+        padding: 1vw 5vw;
+    }
+
+    #site .left,
+    #data .left,
+    #prototype .left,
+    #sprint .left,
+    #asset .left,
+    #ani_opg .left,
+    #billeddeling .left,
+    #redesign .left {
+        padding: 2vw 5vw 5vw;
+    }
+
+    #pilot .left {
+        padding: 0 5vw 0 0;
+    }
+
+    #site .right,
+    #data .right,
+    #prototype .right,
+    #sprint .right,
+    #asset .right,
+    #ani_opg .right,
+    #billeddeling .right,
+    #redesign .right {
+        padding: 2vw 0vw 0vw 0;
+    }
+
+    #redesign .col_video {
+        padding: 0vw 5vw;
+    }
+
+    #redesign .video {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0vw 5vw 5vw;
+    }
+
+    #site img,
+    #data img,
+    #prototype img,
+    #sprint img,
+    #asset img,
+    #ani_opg img,
+    #billeddeling img,
+    #redesign img {
+        height: 25vw;
+        width: auto;
+    }
+
+    #data .data_image,
+    #prototype .prototype_image {
+        height: 25vw;
+        width: 25vw;
+    }
+
+    #pilot video {
+        width: 38vw;
+        height: auto;
+    }
+
+    #site .frame,
+    #data .frame,
+    #prototype .frame,
+    #sprint .frame,
+    #asset .frame,
+    #ani_opg .frame,
+    #billeddeling .frame,
+    #redesign .frame {
+        width: 24.5vw;
+        height: 24.5vw;
+        left: -1.5vw;
+        top: 0.5vw;
+    }
+
+    #site .line,
+    #data .line,
+    #prototype .line,
+    #sprint .line,
+    #asset .line,
+    #ani_opg .line,
+    #billeddeling .line,
+    #redesign .line,
+    #om .line {
+        height: 0.25vw;
+        width: 14vw;
+        top: 4vw;
+        left: -12vw;
+    }
+
+    /*------------------------------
+: OM
+------------------------------*/
+
+    #om .sectionwrapper {
+        padding-top: 0;
+        height: 35.3vw;
+    }
+
+    #om .breadcrumbs {
+        padding-top: 0;
+        position: absolute;
+        top: 3vw;
+    }
+
+    #om .left {
+        padding: 0vw 5vw 10vw 10vw;
+    }
+
+    #om .right {
+        padding: 0vw 1vw 5vw 0;
+    }
+
+    #om h3 {
+        position: absolute;
+        top: 7vw;
+    }
+
+    #om img {
+        height: 30vw;
+        width: auto;
+        position: absolute;
+        top: -5vw;
+        left: 3vw;
+    }
+
+    #om .frame {
+        border-width: 0.18vw;
+        width: 22vw;
+        height: 30vw;
+        left: 1vw;
+        top: -7vw;
+    }
+
+    #om .line {
+        height: 0.18vw;
+        width: 17vw;
+        top: -1vw;
+        z-index: 1;
+    }
+
+
+}
