@@ -1,18 +1,20 @@
 /*------------------------------
-1: GENERELT ?-?
-2: KLASSER ?-?
-: BURGER MENU ?-?
-: HEADLINE ?-?
-: FORSIDE ?-?
-: PORTFOLIO ?-?
-: WEB, UX, ANIMATION & CONTENT ?-?
-: OPGAVER + OM (ikke alt) ?-?
-: OM ?-?
+GENERELT linje 18-98
+KLASSER linje 104-182
+BURGER MENU linje 188-264
+HEADLINE linje 270-293
+BRØDKRUMMESTI linje 299-323
+FOOTER linje 330-343
+FORSIDE linje 350-355
+PORTFOLIO linje 362-426
+WEB, UX, ANIMATION & CONTENT linje 432-531
+OPGAVER + OM linje 537-666
+MEDIA linje 672-1111
 ------------------------------*/
 
 
 /*------------------------------
-1: GENERELT linie ?-?
+1: GENERELT linje 18-98
 ------------------------------*/
 
 body {
@@ -98,7 +100,7 @@ h4 {
 }
 
 /*------------------------------
-3: KLASSER linie ?-?
+KLASSER linje 104-182
 ------------------------------*/
 
 .rotate {
@@ -182,7 +184,7 @@ h4 {
 }
 
 /*------------------------------
-: BURGER MENU linie ?-?
+BURGER MENU linje 188-264
 ------------------------------*/
 
 #menu_button {
@@ -263,10 +265,8 @@ nav a:hover {
     color: #8a48a2;
 }
 
-
-
 /*------------------------------
-: HEADLINE linie ?-?
+HEADLINE linje 270-293
 ------------------------------*/
 
 .headline {
@@ -295,7 +295,7 @@ nav a:hover {
 }
 
 /*------------------------------
-: BRØDKRUMMESTI ?-?
+BRØDKRUMMESTI linje 299-323
 ------------------------------*/
 
 .breadcrumbs {
@@ -325,7 +325,7 @@ nav a:hover {
 }
 
 /*------------------------------
-: FOOTER linie ?-?
+FOOTER linje 330-343
 ------------------------------*/
 
 footer {
@@ -344,7 +344,7 @@ footer {
 }
 
 /*------------------------------
-: FORSIDE linie ?-?
+FORSIDE linje 350-355
 ------------------------------*/
 
 #forside {
@@ -356,7 +356,7 @@ footer {
 
 
 /*------------------------------
-: PORTFOLIO linie ?-?
+PORTFOLIO linje 362-426
 ------------------------------*/
 
 #portfolio .image {
@@ -426,7 +426,7 @@ footer {
 }
 
 /*------------------------------
-: WEB, UX, ANIMATION & CONTENT
+WEB, UX, ANIMATION & CONTENT linje 432-531
 ------------------------------*/
 
 #web h4,
@@ -531,7 +531,7 @@ top,
 }
 
 /*------------------------------
-: OPGAVER + OM (ikke alt)
+OPGAVER + OM linje 537-666
 ------------------------------*/
 
 #site .col,
@@ -595,6 +595,10 @@ top,
     padding: 0vw 0vw 10vw;
 }
 
+#pilot video {
+    padding-top: 10vw;
+}
+
 #site .frame,
 #data .frame,
 #prototype .frame,
@@ -656,14 +660,14 @@ top,
     filter: grayscale(0);
 }
 
-/*------------------------------
-: OM
-------------------------------*/
-
 #om .frame {
     height: 92vw;
     width: 70vw;
 }
+
+/*------------------------------
+MEDIA linje 672-1114
+------------------------------*/
 
 @media only screen and (min-width:900px) {
 
@@ -770,7 +774,7 @@ ALMINDELIG MENU
     }
 
     /*------------------------------
-: BRØDKRUMMESTI ?-?
+BRØDKRUMMESTI
 ------------------------------*/
 
     .breadcrumbs {
@@ -779,7 +783,7 @@ ALMINDELIG MENU
 
 
     /*------------------------------
-: FORSIDE
+FORSIDE
 ------------------------------*/
     .forside_footer {
         display: none;
@@ -793,7 +797,7 @@ ALMINDELIG MENU
     }
 
     /*------------------------------
-: PORTFOLIO
+PORTFOLIO
 ------------------------------*/
 
     #portfolio .image {
@@ -879,7 +883,7 @@ ALMINDELIG MENU
 
 
     /*------------------------------
-: WEB, UX, ANIMATION & CONTENT
+WEB, UX, ANIMATION & CONTENT
 ------------------------------*/
 
     #web h4,
@@ -958,7 +962,7 @@ ALMINDELIG MENU
     }
 
     /*------------------------------
-: OPGAVER + OM (ikke alt)
+OPGAVER + OM (ikke alt)
 ------------------------------*/
 
     #pilot .col {
@@ -1022,6 +1026,7 @@ ALMINDELIG MENU
     #pilot video {
         width: 38vw;
         height: auto;
+        padding-top: 0vw;
     }
 
     #site .frame,
@@ -1054,7 +1059,7 @@ ALMINDELIG MENU
     }
 
     /*------------------------------
-: OM
+OM
 ------------------------------*/
 
     #om .sectionwrapper {
@@ -1103,6 +1108,4 @@ ALMINDELIG MENU
         top: -1vw;
         z-index: 1;
     }
-
-
 }
